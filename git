@@ -1,0 +1,8 @@
+git当前版本
+git rev-parse HEAD
+
+git回退到指定版本
+git reset --hard xxx
+
+git提交记录
+git log
