@@ -1,0 +1,8 @@
+<%= form_for(@asset, :url => {:action => "get_export_data",:format=>:xls}, :builder => CustomFormBuilder) do |f| %>
+
+
+format.xls {
+        send_data(data_to_xls(data,
+
+
+action中指定format格式为.xls时,若按钮所在界面无datatable,需指定表单format格式为:xls
