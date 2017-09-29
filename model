@@ -1,0 +1,4 @@
+1=>	在model中添加attr_accessor ef.在irm_person.rb中添加attr_accessor :plate_id
+	即是为该model添加对该字段的get及set方法,使其作为model的一个字段使用,适用于数据库中并不存在该字段的情况下,同时在网页上该字段的id显示为irm_person_plate_id;
+
+
