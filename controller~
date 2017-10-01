@@ -1,9 +1,0 @@
-1=>	使用事务防止批量操作中产生错误
-      begin
-        ActiveRecord::Base.transaction do
-		xxx
-	end
-      rescue => ex
-        err_msg = ex.message
-      end
-
