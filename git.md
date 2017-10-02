@@ -25,3 +25,6 @@
 `git log`
 ##### git修改原文件为markdown格式
 `git mv xx xx.md`
+##### git分支管理
+- 新建从分支并切换至新分支`git checkout -b xx`
+- 
