@@ -27,4 +27,5 @@
 `git mv xx xx.md`
 ##### git分支管理
 - 新建从分支并切换至新分支`git checkout -b xx`
-- 
+- 切换分支`git checkout xx`
+- 合并某分支到h当前所在分支`git merge xx`
