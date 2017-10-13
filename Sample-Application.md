@@ -74,3 +74,17 @@ gem 'rspec-rails', '3.3.2'`
        expected false to respond to `false?` or perhaps you meant `be false` or `be_falsey`   
        
 	=>解决方法：`be_false` => `be_falsey`
+- `/app/assets/stylesheets/custom.css.scss`导入bootstrap报错
+
+    =>报错信息：
+		ActionView::Template::Error (undefined method `environment' for nil:NilClass
+        (in /home/xlw/rails_projects/sample_app1/app/assets/stylesheets/custom.css.scss)):
+        2: <html>
+        3: <head>
+        4:   <title><%= full_title(yield(:title)) %></title>
+        5:   <%= stylesheet_link_tag "application", media: "all",
+        6:                           "data-turbolinks-track" => true %>
+        7:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+        8:   <%= csrf_meta_tags %>
+      app/views/layouts/application.html.erb:5:in '_app_views_layouts_application_html_erb___3300491497441746084_69910360596840' 
+	=>解决方法：修改Gemfile，加入`gem 'sass-rails', '~> 4.0.2'`，执行`bundle install`即可。
