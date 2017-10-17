@@ -1,10 +1,21 @@
 - `rails generate controller FooBars baz quux`
 - `rails destroy controller FooBars baz quux`
-
-- `rails generate model Foo bar:string baz:integer`
+- `rails generate model Foo bar:string baz:integer`	--此时会生成一个migration，如不指定字段，可在migration中编写，执行后生成相应字段
 - `rails destroy model Foo`	--模型可省略命令行剩余的参数
-
 - `rake db:migrate`
 - `rake db:rollback`
 - `rake db:migrate VERSION=0` --退回初始状态,数字可切换
 - rails以表单中字段的name属性的值为键，用户输入的内容为值，构成一个名为params的Hash，用于创建。
+- `RAILS_ENV=production rake db:migrate`
+- `RAILS_ENV=production rake irm:initdata`
+- `RAILS_ENV=production script/delayed_job restart`
+- `RAILS_ENV=production script/delayed_job stop`
+- `RAILS_ENV=production script/delayed_job start`
+- `RAILS_ENV=production rake sunspot:solr:start`
+- `RAILS_ENV=production rake sunspot:solr:stop`
+- `RAILS_ENV=production script/scheduler restart`
+- `RAILS_ENV=production rake sunspot:reindex`
+- `RAILS_ENV=production rake assets:precompile`
+- `export NLS_LANG=american_america.AL32UTF8`
+- validates
+    - `validates_numericality_of`	文本框仅输入数字
