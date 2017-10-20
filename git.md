@@ -29,3 +29,7 @@
 - 新建从分支并切换至新分支`git checkout -b xx`
 - 切换分支`git checkout xx`
 - 合并某分支到h当前所在分支`git merge xx`
+
+##### git复制远程分支
+- `git clone -b hotline_newest http://git.hisuite-hand.com/hisuite-team/hisuite.git`
+- `git clone -b ccc_new http://rdc.hand-china.com/gitlab/rdc_hi/ironmine.git`
