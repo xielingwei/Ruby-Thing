@@ -1,0 +1,29 @@
+RAILS_ENV=production rake db:migrate
+RAILS_ENV=production rake irm:initdata
+RAILS_ENV=production script/delayed_job restart
+RAILS_ENV=production script/delayed_job stop
+RAILS_ENV=production script/delayed_job start
+RAILS_ENV=production rake sunspot:solr:start
+RAILS_ENV=production rake sunspot:solr:stop
+RAILS_ENV=production script/scheduler restart
+RAILS_ENV=production rake sunspot:reindex
+RAILS_ENV=production rake assets:precompile
+
+export NLS_LANG=american_america.AL32UTF8
+
+git clone -b hotline_newest http://git.hisuite-hand.com/hisuite-team/hisuite.git
+
+git clone -b ccc_new http://rdc.hand-china.com/gitlab/rdc_hi/ironmine.git
+8664 handhand
+
+mysqldump -uroot -pC3KQgC2Jh12VPNyU -h114.55.9.221 hisuite_michelin > ../michelin.sql
+mysql -uroot -proot michelin < ../michelin.sql
+
+mysqldump -uroot -proot -h172.20.0.70 irm_prod_sap > ../irm_prod_sap.sql
+mysql -uroot -proot irm_prod_sap < ../irm_prod_sap.sql
+
+Digest::SHA1.hexdigest('handhand')
+
+
+du -sm 文件夹名 	查看文件夹大小
+df -lh 			查看容量
