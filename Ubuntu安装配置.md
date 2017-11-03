@@ -2,18 +2,15 @@
 		=>提示：
         	what is the location of the "ifconfig"program on your machine?
         =>解决：
-        	输入‘yes’即可       
-            
+        	输入‘yes’即可         
 2. 安装rvm
 		1> gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
         2> \curl -sSL https://get.rvm.io | bash
         3> echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"' >>~/.bashrc
         4> source ~/.bashrc
-
 3. 利用rvm安装ruby
 		rvm requirements
-        rvm install 1.9.3
-        
+        rvm install 1.9.3    
 4. 安装MySQL
 		sudo apt-get install mysql-server mysql-client
         sudo service mysql restart
@@ -30,7 +27,6 @@
             1>grant all privileges on *.* to root@"%" identified by "root" with grant option;
             2>flush privileges;
             重启MySQL -service mysql restart
-            
 5. 安装jdk
 
 	1>下载安装包，`tar -zxvf xx`解压
@@ -42,7 +38,6 @@
 
 	3>执行`source ~/.bashrc`使改动生效
     4>执行`java -version`验证
-   
 6. 安装Git `sudo apt-get install git`
 7. 安装搜狗输入法
 		sudo dpkg -i XX
@@ -62,3 +57,6 @@
 		tar -zxvf xxx
         cd RubyMine-2017.2.4/bin
         ./rubymine.sh
+11. 安装guake
+		sudo apt-get update
+        
