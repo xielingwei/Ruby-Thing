@@ -1,6 +1,0 @@
-ssh root@172.20.0.83
-handhisms
-
-cd /u03/ironmine
-
-service httpd restart

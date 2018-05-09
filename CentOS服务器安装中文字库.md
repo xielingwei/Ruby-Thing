@@ -1,0 +1,17 @@
+- 查看是否存在中文字库`fc-list`
+- 安装字体库`yum -y install fontconfig`
+- 此时在`/usr/shared`目录就可以看到`fonts`和`fontconfig`目录了（之前是没有的）
+- 添加中文字体
+	- 中文字体文件在`windows`系统中就可以找到，位于`c`盘下的`Windows/Fonts`目录
+	- 将需要的字体拷贝出来（可使用`scp`命令）并上传至`linux`服务器
+	- 在`/usr/shared/fonts`目录下新建一个目录`chinese`
+	- 将字体上传至`/usr/shared/fonts/chinese`目录下
+	- 修改`chinese`目录的权限 `chmod -R 755 /usr/share/fonts/chinese`
+	- 安装`ttmkfdir`来搜索目录中所有的字体信息，并汇总生成`fonts.scale`文件 `yum -y install ttmkfdir`
+	- 执行`ttmkfdir`命令 `ttmkfdir -e /usr/share/X11/fonts/encodings/encodings.dir` 这个命令执行失败，原因是缺少`encodings.dir`文件，但不影响结果
+	- 通过编辑器打开配置文件 `vi /etc/fonts/fonts.conf`
+	- 加入![](https://img-blog.csdn.net/20160525162529288)
+	- `:wq`保存退出
+	- 刷新内存中的字体缓存 `fc-cache`
+	- `fc-list` 查看结果
+	- ![](https://img-blog.csdn.net/20160525164056044)
